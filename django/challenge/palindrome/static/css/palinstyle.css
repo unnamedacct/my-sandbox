@@ -14,7 +14,6 @@ th:nth-child(even), td:nth-child(even) {
 }
 
 h1 {
-    color: white;
     margin-top: 0.5rem;
 }
 
@@ -36,9 +35,11 @@ h1 {
 }
 
 #main {
-    position: relative;
-    top: -5rem;
+    left: 9%;
+    top: 6rem;
+    position: absolute;
+    background-color: white;
     margin: 0 auto;
     padding: 1rem;
-    width: 75%;
+    width: 80%;
 }
