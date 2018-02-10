@@ -50,11 +50,11 @@ function _createRecord(enteredText) {
 }
 
 function processInput() {
-    const enteredText = document.getElementById("entry").value.trim();
+    const inputField = document.getElementById("entry");
+    const enteredText = inputField.value.trim();
     const isPalindrome = _isPalindrome(enteredText);
 
     _createRecord(enteredText);
     _displayStatus(isPalindrome, enteredText);
-
-    enteredText.value = "";
+    inputField.value = ""; 
 }
