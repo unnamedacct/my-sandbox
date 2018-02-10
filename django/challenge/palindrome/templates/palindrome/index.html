@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    {% load static %}
+    <link href="{% static "css/palinstyle.css" %}" rel="stylesheet"></script>
+</head>
+<body>
+    <div id="status"><span></span></div>
+    <div id="banner"></div>
+    <div id="main">
+        <h1> Palindrome checker </h1>
+        <div>
+            <input type="text" name="entry" id="entry" placeholder="Enter word here"> 
+            <hr>
+            <button onclick="processInput()"> Check Palindrome </button>
+        </div>
+        <div id="result" style="display: none;">
+            <h2>History</h2>
+            <table id="history">
+                <tbody>
+                <tr><th>Word</th><th>Palindrome?</th></tr>
+                <hr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="{% static "js/processinput.js" %}"></script>
+</body>
+</html>
+
