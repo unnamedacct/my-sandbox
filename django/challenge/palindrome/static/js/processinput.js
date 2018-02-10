@@ -22,7 +22,7 @@ function _isPalindrome(str) {
 
 function _displayStatus(success, enteredText) {
     const statusBar = document.getElementById("status");
-    statusBar.style.display = "block";
+    statusBar.style.display = (enteredText.length > 0) ? "block" : "none";
     statusBar.style.backgroundColor = (success ? "green" : "red");
     spanElement = statusBar.getElementsByTagName("span")[0];
     spanElement.innerText = 
@@ -38,10 +38,10 @@ function _createRecord(enteredText) {
     const isPalindrome = _isPalindrome(enteredText)
     const resultDiv = document.getElementById("result");
 
-    resultDiv.style.display = "inline";
-
     if (enteredText.length == 0)
         return;
+
+    resultDiv.style.display = "block";
 
     tableEntry.innerHTML = 
         "<td>" + enteredText + "</td> <td>" + ( isPalindrome ? "yes" : "no" ) + "</td>";
@@ -56,5 +56,6 @@ function processInput() {
 
     _createRecord(enteredText);
     _displayStatus(isPalindrome, enteredText);
+
     inputField.value = ""; 
 }
